@@ -107,8 +107,8 @@ initTestimonialSlider();
 // IMPORTANT: Replace these with your actual Supabase project URL and anon key!
 // You also need to create a table named 'contact_messages' in your Supabase database 
 // with columns: full_name (text), email (text), phone (text), subject (text), message (text).
-const SUPABASE_URL = 'YOUR_SUPABASE_URL_HERE';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY_HERE';
+const SUPABASE_URL = 'https://zaxyftvmgqwxoqgxfwwa.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpheHlmdHZtZ3F3eG9xZ3hmd3dhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI0MTA5NDEsImV4cCI6MjA5Nzk4Njk0MX0.KKOL0N3zHCXEeImdxSPNZu1qAgJsnYAqOt4ag_11Bno';
 
 let supabaseClient = null;
 if (typeof window.supabase !== 'undefined' && SUPABASE_URL !== 'YOUR_SUPABASE_URL_HERE') {
@@ -118,11 +118,11 @@ if (typeof window.supabase !== 'undefined' && SUPABASE_URL !== 'YOUR_SUPABASE_UR
 function initFormValidation() {
   const form = document.querySelector('.contact-form');
   if (!form) return;
-  
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     let valid = true;
-    
+
     // Validate required fields
     form.querySelectorAll('[required]').forEach(field => {
       if (!field.value.trim()) {
@@ -132,7 +132,7 @@ function initFormValidation() {
         field.style.borderColor = '';
       }
     });
-    
+
     if (valid) {
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.innerHTML;
@@ -152,15 +152,15 @@ function initFormValidation() {
           const { data, error } = await supabaseClient
             .from('contact_messages')
             .insert([
-              { 
-                full_name: fullName, 
-                email: email, 
-                phone: phone, 
-                subject: subject, 
-                message: message 
+              {
+                full_name: fullName,
+                email: email,
+                phone: phone,
+                subject: subject,
+                message: message
               }
             ]);
-            
+
           if (error) throw error;
         } else {
           // If Supabase isn't setup yet, simulate network request for testing
@@ -171,7 +171,7 @@ function initFormValidation() {
         // Show Success Message
         btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
         btn.style.background = 'linear-gradient(135deg, var(--accent), var(--accent-light))';
-        
+
         setTimeout(() => {
           btn.innerHTML = originalText;
           btn.style.background = '';
@@ -183,7 +183,7 @@ function initFormValidation() {
         console.error('Error submitting form:', error);
         btn.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error! Try Again.';
         btn.style.background = '#ef4444';
-        
+
         setTimeout(() => {
           btn.innerHTML = originalText;
           btn.style.background = '';
