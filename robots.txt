@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tharumika.github.io/deshakthi-website/sitemap.xml

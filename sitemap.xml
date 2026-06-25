@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://tharumika.github.io/deshakthi-website/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://tharumika.github.io/deshakthi-website/about.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://tharumika.github.io/deshakthi-website/services.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://tharumika.github.io/deshakthi-website/job-seekers.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://tharumika.github.io/deshakthi-website/employers.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://tharumika.github.io/deshakthi-website/contact.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://tharumika.github.io/deshakthi-website/privacy.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://tharumika.github.io/deshakthi-website/terms.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+</urlset>
